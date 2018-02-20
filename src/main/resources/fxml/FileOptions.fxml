@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="de.schenerator.presenter.FilePresenter">
+	<children>
+		<HBox layoutX="10.0" layoutY="10.0">
+			<children>
+				<GridPane>
+					<columnConstraints>
+						<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"
+							minWidth="100.0" />
+						<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"
+							minWidth="100.0" />
+						<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"
+							minWidth="100.0" prefWidth="100.0" />
+						<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"
+							minWidth="100.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints maxHeight="-Infinity" minHeight="-Infinity"
+							prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<ImageView fitHeight="40.0" fitWidth="40.0"
+							onMouseClicked="#onImportScheduleOption" pickOnBounds="true"
+							preserveRatio="true">
+							<image>
+								<Image url="@../icon/import.png" />
+							</image>
+						</ImageView>
+						<ImageView fitHeight="40.0" fitWidth="40.0"
+							onMouseClicked="#onExportScheduleOption" pickOnBounds="true"
+							preserveRatio="true" GridPane.columnIndex="1">
+							<image>
+								<Image url="@../icon/export.png" />
+							</image>
+						</ImageView>
+						<Label fx:id="importScheduleOption" text="Import schedule"
+							GridPane.rowIndex="1" />
+						<Label fx:id="exportScheduleOption" text="Export schedule"
+							GridPane.columnIndex="1" GridPane.rowIndex="1" />
+						<ImageView fitHeight="50.0" fitWidth="40.0"
+							onMouseClicked="#onUndoOption" pickOnBounds="true" preserveRatio="true"
+							GridPane.columnIndex="2">
+							<image>
+								<Image url="@../icon/undo.png" />
+							</image>
+						</ImageView>
+						<ImageView fitHeight="50.0" fitWidth="40.0"
+							onMouseClicked="#onRedoOption" pickOnBounds="true" preserveRatio="true"
+							GridPane.columnIndex="3">
+							<image>
+								<Image url="@../icon/redo.png" />
+							</image>
+						</ImageView>
+						<Label fx:id="undoOption" text="Undo" GridPane.columnIndex="2"
+							GridPane.rowIndex="1" />
+						<Label fx:id="redoOption" text="Redo" GridPane.columnIndex="3"
+							GridPane.rowIndex="1" />
+					</children>
+				</GridPane>
+			</children>
+		</HBox>
+	</children>
+</AnchorPane>

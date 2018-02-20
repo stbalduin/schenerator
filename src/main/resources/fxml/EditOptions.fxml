@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.schenerator.presenter.EditPresenter">
+   <children>
+      <HBox layoutX="10.0" layoutY="10.0">
+         <children>
+<!--             <VBox> -->
+<!--                <children> -->
+<!--                   <Label text="X Axis" fx:id="xAxisLabel" /> -->
+<!--                   <GridPane> -->
+<!--                      <columnConstraints> -->
+<!--                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" /> -->
+<!--                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" /> -->
+<!--                      </columnConstraints> -->
+<!--                      <rowConstraints> -->
+<!--                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /> -->
+<!--                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /> -->
+<!--                      </rowConstraints> -->
+<!--                      <children> -->
+<!--                         <HBox GridPane.rowIndex="1"> -->
+<!--                            <children> -->
+<!--                               <ChoiceBox fx:id="xResolutionSelector" /> -->
+<!--                            </children> -->
+<!--                         </HBox> -->
+<!--                      </children> -->
+<!--                   </GridPane> -->
+<!--                </children> -->
+<!--                <padding> -->
+<!--                   <Insets left="5.0" right="5.0" /> -->
+<!--                </padding> -->
+<!--             </VBox> -->
+            <VBox>
+               <children>
+                  <Label fx:id="yAxisLabel" text="Y Axis" />
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="55.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="55.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <TextField fx:id="minYTextField" maxWidth="40.0" />
+                              <Label fx:id="yAxisScaleToLabel" text="to" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="1">
+                           <children>
+                              <TextField fx:id="maxYTextField" maxWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="scaleYButton" mnemonicParsing="false" onAction="#onScaleYAction" text="Scale" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="trimYButton" mnemonicParsing="false" onAction="#onTrimYAction" text="Trim" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="15.0" />
+               </padding>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label fx:id="changeRangeLabel" text="Change Range" />
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="55.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="55.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="sameRangeCheckBox" mnemonicParsing="false" selected="true" text="same for both" GridPane.columnSpan="2" />
+                        <HBox alignment="CENTER_LEFT" GridPane.rowIndex="1">
+                           <children>
+                              <TextField fx:id="changeLeftRangeTextField" maxWidth="45.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <TextField fx:id="changeRightRangeTextField" disable="true" maxWidth="45.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label fx:id="noiseLabel" text="Noise" />
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="55.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="55.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <TextField fx:id="noiseStrengthTextField" maxWidth="45.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" GridPane.rowIndex="1">
+                           <children>
+                              <ChoiceBox fx:id="noiseSelector" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="applyNoiseButton" mnemonicParsing="false" onAction="#onNoiseApplyAction" text="Apply" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="1">
+                           <children>
+                              <CheckBox fx:id="percentageCheckBox" mnemonicParsing="false" text="Percent" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets left="15.0" right="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

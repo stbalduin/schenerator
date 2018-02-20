@@ -1,0 +1,144 @@
+
+.root { 
+	primary-color: #1a9ee0;
+	secondary-color: #ed9900;
+	tertiary-color: #00be23;
+	-fx-background-color: white; 
+	-fx-focus-color: primary-color;
+	-fx-faint-focus-color: secondary-color;
+}
+
+.default-color0.chart-series-line { -fx-stroke: primary-color; }   
+.default-color0.chart-line-symbol { -fx-background-color: primary-color, white; } 
+
+.button {
+    -fx-border-color: black;
+    -fx-background-color: white;
+    
+}
+
+.button:hover {
+	-fx-background-color: linear-gradient(to top right, white, secondary-color); 
+}
+
+.button:armed {
+	-fx-background-color: linear-gradient(to top right, secondary-color, primary-color); 
+}
+
+.choice-box {
+	-fx-background-color: white;
+	-fx-border-color: black;
+}
+
+.choice-box:hover {
+	-fx-background-color: linear-gradient(to top right, white, secondary-color); 
+}
+
+.check-box {
+	-fx-background-color: white;
+}
+
+.check-box > .box {
+	-fx-border-color: black;
+	-fx-background-color: white;
+}
+
+.check-box:hover > .box  {
+	-fx-effect: dropshadow(gaussian, secondary-color, 10,0.5, 0.0, 0.0);
+}
+
+.text-field {
+	-fx-border-color: black;
+	-fx-background-color: white;
+	-fx-border-radius: 5 5 5 5;
+}
+
+.text-field:hover {
+	-fx-effect: dropshadow(gaussian, secondary-color, 10,0.5, 0.0, 0.0);
+}
+
+.chart {
+    -fx-background-color: white;  
+}
+
+.chart-legend {
+   -fx-background-color:  white;
+}
+ 
+.chart-legend-item-symbol{
+   -fx-background-radius: 2.0;
+}
+
+.chart-plot-background {
+    -fx-background-color: white;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: white;
+    -fx-stroke-width: 0.0;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: black;
+}
+.chart-alternative-row-fill {
+    -fx-fill: white;
+    -fx-stroke: white;
+    -fx-stroke-width: 0.0;
+}
+.axis{
+	 -fx-font-size: 1.3em;    
+    -fx-tick-label-fill: black;
+}
+.axis-label {
+   -fx-text-fill: black; 
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0.0;
+    -fx-tab-min-height: 25.0px;
+    -fx-tab-max-height: 25.0px;
+}
+
+.tab-header-area {
+    -fx-border-color: white white black white ;
+}
+
+.tab {
+    -fx-background-color: white; 
+    -fx-border-color:black black white black;
+}
+
+.tab:hover {
+	-fx-background-color: linear-gradient(to top right, white, secondary-color); 
+}
+
+
+.tab-pane {
+    -fx-tab-min-width: 80.0px;
+    -fx-tab-min-height: 20.0px;
+    -fx-background-color: white;
+}
+
+
+.tab:selected {
+    -fx-background-color: primary-color;
+    -fx-border-color: black black primary-color black;
+
+}
+
+.tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: black;
+    -fx-font-size: 11.0px;
+    -fx-font-weight: bold;
+	-fx-font-family: sans-serif;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+	-fx-font-family: sans-serif;
+}
+
+.tab:selected > .tab:hover {
+	-fx-background-color: linear-gradient(to top right, primary-color, secondary-color); 
+}
